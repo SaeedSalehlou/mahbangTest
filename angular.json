@@ -18,6 +18,9 @@
         "@schematics/angular:pipe": {
           "standalone": false,
           "skipTests": false
+        },
+        "@schematics/angular:service": {
+          "skipTests": false
         }
       },
       "root": "",
@@ -40,6 +43,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -100,6 +104,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
