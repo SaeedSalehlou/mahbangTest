@@ -1,0 +1,42 @@
+<form [formGroup]="employeeFormGroup">
+    <div style="width: 500px;">
+        <div class="row">
+            @if(id){
+            <h2> <b> Detail Employee</b> </h2>
+            } @else {
+            <h2> New Employee </h2>
+            }
+            <div class="row">
+                <mat-form-field>
+                    <mat-label> Name</mat-label>
+                    <input matInput formControlName="employee_name" type="text" required>
+                    <mat-error
+                        *ngIf="employeeFormGroup!.get('employee_name')!.invalid">{{getNameErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Sallary</mat-label>
+                    <input matInput formControlName="employee_salary" type="number" required>
+                    <mat-error
+                        *ngIf="employeeFormGroup!.get('employee_salary')!.invalid">{{getSalaryErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Age</mat-label>
+                    <input matInput formControlName="employee_age" type="number" required>
+                    <mat-error
+                        *ngIf="employeeFormGroup!.get('employee_age')!.invalid">{{getAgeErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div mat-dialog-actions style="margin-top: 20px;">
+                <button mat-flat-button color="primary" cdkFocusInitial [disabled]="!employeeFormGroup!.valid"
+                    (click)="onSaveClick()">
+                    @if(id){Update}@else {Create}
+                </button>
+                <button mat-flat-button (click)="onCancelick()">Back</button>
+            </div>
+        </div>
+    </div>
+</form>

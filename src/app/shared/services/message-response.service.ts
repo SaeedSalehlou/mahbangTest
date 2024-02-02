@@ -5,7 +5,7 @@ import { BaseResponseModel } from '../../domain/models/base/base-response.model'
 @Injectable({
   providedIn: 'root',
 })
-export abstract class MatSnackBarService {
+export abstract class MessageResponseService {
   private config: MatSnackBarConfig;
   constructor(private snackBar: MatSnackBar) {
     this.config = new MatSnackBarConfig();

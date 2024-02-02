@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+}
+
+.myProject-container {
+    height: calc(100vh - 150px);
+    overflow: auto;
+}
+
+.myProject-full-width {
+    margin-left: 10px;
+    width: 50%;
+}
+
+.mat-column-id {
+    width: 10% !important;
+    text-align: center;
+}
+
+.mat-column-name {
+    width: 30% !important;
+    text-align: center;
+}
+
+.mat-column-salary {
+    width: 20% !important;
+    text-align: center;
+}
+
+.mat-column-age {
+    width: 20% !important;
+    text-align: center;
+}
+
+.mat-column-image {
+    width: 20% !important;
+    text-align: center;
+}
